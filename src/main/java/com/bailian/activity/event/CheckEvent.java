@@ -1,5 +1,10 @@
 package com.bailian.activity.event;
 
+import java.util.List;
+import java.util.Map;
+
+import com.bailian.activity.check.entity.CheckTemplate;
+
 public class CheckEvent {
 	
 	private String requestId;//请求id
@@ -34,7 +39,13 @@ public class CheckEvent {
 	public void setOutput(Object[] output) {
 		this.output = output;
 	}
-	
+	public void setOutput(int index,Object obj) {
+		output[index] = obj;
+		
+	}
+	public Object getOutput(int index){
+		return output[index]; 
+	}
 	
 	
 	

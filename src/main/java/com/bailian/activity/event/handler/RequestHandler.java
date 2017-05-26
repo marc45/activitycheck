@@ -16,6 +16,7 @@ public class RequestHandler implements EventHandler<CheckEvent>{
 		CheckRequest request = new CheckRequest();
 		BeanUtils.copyProperties(checkEvent, request);
 		checkRequestRepository.save(request);
+		checkEvent.setOutput(0, request.getId());
 	}
 
 	
